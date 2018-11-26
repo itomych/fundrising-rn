@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     borderRadius: 28 / 2,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#22f',
+    backgroundColor: 'rgba(88, 165, 255, 1)',
   },
   containerDisabled: {
     height: 28,
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     borderRadius: 28 / 2,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#22f9',
+    backgroundColor: 'rgba(88, 165, 255, 0.4)',
   },
   image: {
     height: 20,

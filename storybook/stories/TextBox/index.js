@@ -50,7 +50,7 @@ export default class TextBox extends PureComponent {
             value={value}
             maxLength={maxLength}
             placeholder={placeholder}
-            placeholderTextColor={'grey'}
+            placeholderTextColor={colors.placeholder}
             returnKeyType={'send'}
             underlineColorAndroid={'transparent'}
             multiline
@@ -91,20 +91,29 @@ TextBox.propTypes = {
   sending: PropTypes.bool,
 };
 
+const colors = {
+  textInput: '#000',
+  placeholder: 'rgb(130, 130, 134)',
+  rowTopBackground: 'rgb(248, 248, 250)',
+  description: 'rgb(187, 187, 187)',
+};
+
 const styles = StyleSheet.create({
   container: {
     width: '100%',
+    maxWidth: 335,
+    minHeight: 61,
   },
   rowTop: {
     width: '100%',
     flexDirection: 'row',
     alignItems: 'flex-end',
-    backgroundColor: '#eee',
+    backgroundColor: colors.rowTopBackground,
     padding: 16,
     borderRadius: 8,
   },
   rowBottom: {
-    marginTop: 8,
+    marginTop: 4,
     width: '100%',
     flexDirection: 'row',
     alignItems: 'flex-start',
@@ -112,21 +121,24 @@ const styles = StyleSheet.create({
   },
   textInput: {
     flex: 1,
-    fontSize: 16,
-    color: '#000',
+    alignSelf: 'stretch',
+    fontSize: 14,
+    color: colors.textInput,
     backgroundColor: 'transparent',
     marginRight: 16,
   },
   textDescription: {
     flex: 1,
-    fontSize: 12,
-    color: '#555',
+    fontSize: 10,
+    lineHeight: 15,
+    color: colors.description,
     backgroundColor: 'transparent',
   },
   counter: {
     paddingLeft: 16,
-    fontSize: 12,
-    color: '#555',
+    fontSize: 10,
+    lineHeight: 15,
+    color: colors.description,
     backgroundColor: 'transparent',
   },
 });
